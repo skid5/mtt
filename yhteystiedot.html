@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteystiedot - Matin Terveyspalvelu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Yhteystiedot</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="hieronnat.html">Hieronnat</a></li>
+                <li><a href="valmennus.html">Valmennus</a></li>
+                <li><a href="hinnasto.html">Hinnasto</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>Matti Kettunen</h2>
+                <p>
+                    <strong>Sähköposti:</strong> matti.kettunen (at) kotiportti.fi<br>
+                    <strong>Puhelin:</strong> 044 555 8224
+                </p>
+                <h3>Vastaanotto Pälkäneellä</h3>
+                <p>
+                    Mustapellonpolku 3, piharakennus<br>
+                    36600 Pälkäne
+                </p>
+                <h3>Vastaanotto Lempäälässä</h3>
+                <p>
+                    Hakkarin Helmi<br>
+                    Hakkarintie 5<br>
+                    37550 Lempäälä
+                </p>
+                <h3>Vastaanotto Pirkkalassa (Veska)</h3>
+                <p>
+                    Saapastie 2<br>
+                    33950 Pirkkala
+                </p>
+                <h3>Vastaanotto Hämeenlinnassa</h3>
+                <p>
+                    Hallituskatu 17B<br>
+                    13100 Hämeenlinna
+                </p>
+                <p>
+                    Katso sinulle sopiva aika ja paikka hoitoon: <a href="https://myfascia.asioi.fi/ajanvaraus" target="_blank">myfascia.asioi.fi/ajanvaraus</a>
+                </p>
+            </div>
+            <div class="contact-image">
+                <img src="images/kuva4(myhailija).jpeg" alt="Kuva 4">
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Ota yhteyttä</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nimi:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Sähköposti:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Viesti:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Lähetä</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="scripts/footer.js"></script>
+</body>
+</html>
