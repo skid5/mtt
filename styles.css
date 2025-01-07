@@ -10,21 +10,40 @@ body {
 
 /* Header */
 header {
-    background-color: #8da47e;
-    color: #fff;
+    background-image: url('images/banner_kuva(lappimaisema).jpeg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    color: #fff; /* Light text color for contrast */
     padding: 20px 0;
     text-align: center;
+    position: relative; /* For overlay if needed */
+}
+
+/* Optional: Add an overlay for better text readability */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay with 40% opacity */
+    z-index: 1;
 }
 
 header h1 {
+    position: relative; /* Ensures text is above the overlay */
+    z-index: 2;
     margin: 0;
     font-size: 2.5rem;
 }
 
+/* Navigation Bar */
 nav {
-    background-color: #5a7247;
     padding: 10px 0;
     margin-top: 10px;
+    position: relative; /* Ensures nav is above the overlay */
+    z-index: 2;
 }
 
 nav ul {
@@ -99,6 +118,21 @@ cite {
     flex: 1;
 }
 
+.education-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-list ul li {
+    background-color: #f0f4e8;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #5a7247;
+    border: 1px solid #d0d9c6;
+}
+
 /* Hieronnat Page Specific Styles */
 .content-section {
     display: flex;
@@ -116,39 +150,6 @@ cite {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.education-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.education-list ul li {
-    background-color: #f0f4e8;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    color: #5a7247;
-    border: 1px solid #d0d9c6;
-}
-
-.facebook-feed {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
-
-.fb-feed-placeholder {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    color: #666;
 }
 
 /* Hinnasto Page Specific Styles */
@@ -308,4 +309,41 @@ footer p {
 
 .contact-form button:hover {
     background-color: #8da47e;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Smaller margin for mobile */
+    }
+
+    .education-section,
+    .content-section,
+    .pricing-section,
+    .contact-section {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+
+    .education-image img,
+    .content-image img,
+    .contact-image img {
+        width: 100%; /* Full width for images on mobile */
+    }
+
+    .payment-info {
+        max-width: 100%; /* Full width for payment info on mobile */
+    }
+
+    .contact-form {
+        margin-top: 20px; /* Smaller margin for mobile */
+    }
 }
